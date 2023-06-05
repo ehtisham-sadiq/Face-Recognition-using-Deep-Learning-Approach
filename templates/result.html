@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Recognition Result</title>
+</head>
+<body>
+    <h1>Face Recognition Result</h1>
+    {% if name %}
+    <div>
+        <h2>Detected Name: {{ name }}</h2>
+        <img src="{{ url_for('static', filename='uploaded_image.jpg') }}" width="640" height="480">
+    </div>
+    {% else %}
+    <div>
+        <h2>No face detected in the uploaded image.</h2>
+        <img src="{{ url_for('static', filename='uploaded_image.jpg') }}" width="640" height="480">
+    </div>
+    {% endif %}
+</body>
+</html>
